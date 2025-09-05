@@ -65,7 +65,7 @@ Since this project was developed using **Kaggle Notebooks**, you can run and exp
 2. Running all cells to reproduce results.
 3. Optionally downloading the notebook (`File > Download .ipynb`) to run it locally.
 
-🔗 [Open the Kaggle Notebook](https://www.kaggle.com/code/nouryami/costumer-churn-prediction)
+🔗 [Open the Kaggle Notebook](https://www.kaggle.com/code/nouryami/churning-customer-prediction)
 
 ---
 
