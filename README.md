@@ -48,34 +48,6 @@ Easily configurable and designed for **single-line execution**, with options for
 
 ---
 
-## 📂 Usage
-
-### Quick Run
-
-```python
-from churn_pipeline import ChurnPipeline
-
-pipeline = ChurnPipeline("WA_Fn-UseC_-Telco-Customer-Churn.csv")
-results = pipeline.run()
-```
-
-### Compare Configurations
-
-```python
-from churn_pipeline import compare_configurations
-
-results = compare_configurations("WA_Fn-UseC_-Telco-Customer-Churn.csv")
-```
-
-### Example Output
-
-* **Best Model:** Random Forest
-* **Test Recall:** 0.81
-* **Test AUC:** 0.85
-* **Confusion Matrix & Feature Importances** plotted automatically
-
----
-
 ## 📊 Example Visuals
 
 * Churn distribution pie chart
@@ -83,6 +55,18 @@ results = compare_configurations("WA_Fn-UseC_-Telco-Customer-Churn.csv")
 * Correlation heatmap
 * Model comparison bar plots
 * Confusion matrix
+  
+---
+
+## ▶️ How to Explore the Project
+
+Since this project was developed using **Kaggle Notebooks**, you can run and explore it by:
+
+1. Visiting the Kaggle Notebook (link below).
+2. Running all cells to reproduce results.
+3. Optionally downloading the notebook (`File > Download .ipynb`) to run it locally.
+
+🔗 [Open the Kaggle Notebook](https://www.kaggle.com/code/nouryami/churning-customer-prediction)
 
 ---
 
