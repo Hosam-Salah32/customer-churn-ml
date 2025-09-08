@@ -1,5 +1,3 @@
-# 📊 Customer Churn Prediction with Machine Learning
-
 ## 🧠 Overview
 
 This project focuses on predicting **customer churn** in the telecom industry using machine learning models. Churn prediction allows telecom companies to proactively retain customers and reduce revenue loss.
@@ -12,66 +10,95 @@ The project compares several models, addresses class imbalance, and selects the 
 
 - 📌 Source: [WA_Fn-UseC_-Telco-Customer-Churn.csv](https://www.kaggle.com/datasets/palashfendarkar/wa-fnusec-telcocustomerchurn)
 - 💡 7,000+ customer records with features such as:
-  - Demographics (e.g., gender, senior citizen)
-  - Services used (e.g., internet service, phone service)
-  - Account information (e.g., tenure, payment method)
-  - Target: `Churn` (Yes/No)
+    - Demographics (e.g., gender, senior citizen)
+    - Services used (e.g., internet service, phone service)
+    - Account information (e.g., tenure, payment method)
+    - Target: `Churn` (Yes/No)
+
+# ⚙️ Project Workflow
+
+An all-in-one machine learning pipeline for **customer churn prediction**.  
+Easily configurable and designed for **single-line execution**, with options for:
+- Data cleaning & preprocessing  
+- Exploratory Data Analysis (EDA)  
+- Feature engineering  
+- Imbalanced data handling (SMOTE)  
+- Model training with cross-validation  
+- Model comparison (Accuracy, Recall, AUC)  
+- Voting Classifier for ensemble performance  
+- Feature importance visualization  
 
 ---
 
-## ⚙️ Project Workflow
-
-- Exploratory Data Analysis (EDA) with visualizations
-- Data cleaning and feature engineering
-- Handling class imbalance using **SMOTE**
-- Training and evaluating multiple classification models:
-  - Logistic Regression, Random Forest, SVM, XGBoost
-  - Ensemble models: Voting Classifier and Stacking Classifier
-- Comparing models using:
-  - F1-score
-  - ROC AUC
-  - Confusion matrix and classification report
-
----
-
-## 📈 Results
-
-| Model                | F1-score | ROC AUC |
-|---------------------|----------|---------|
-| Logistic Regression | 0.78     | 0.78    |
-| Random Forest       | 0.86     | 0.86    |
-| SVM                 | 0.85     | 0.85    |
-| XGBoost             | **0.86** | **0.86** |
-| Voting Classifier   | 0.85     | 0.846   |
-| Stacking Classifier | 0.85     | 0.850   |
+## 🚀 Features
+- **Plug-and-play**: run with just a CSV file path.
+- **Configurable**: choose whether to use feature engineering, SMOTE, and which models to train.
+- **Comprehensive EDA**: churn distributions, categorical breakdowns, correlation heatmaps.
+- **Multiple Models** out of the box:
+  - Logistic Regression
+  - Random Forest
+  - Gradient Boosting
+  - Support Vector Machine
+  - K-Nearest Neighbors
+  - Naive Bayes
+  - XGBoost *(optional, if installed)*
+- **Automatic Model Selection**: highlights the best-performing model.
+- **Voting Classifier**: combines models for better performance.
+- **Visual Results**: comparison plots and confusion matrices.
 
 ---
 
-## ✅ Final Model Selection
+## 📂 Usage
 
-**XGBoost** was selected as the final model due to:
-- Its ability to handle mixed feature types (numeric + categorical)
-- Regularization to reduce overfitting
-- Strong performance on both F1-score and ROC AUC
-- Interpretability through feature importance
+### Quick Run
+
+```python
+from churn_pipeline import ChurnPipeline
+
+pipeline = ChurnPipeline("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+results = pipeline.run()
+```
+
+### Compare Configurations
+
+```python
+from churn_pipeline import compare_configurations
+
+results = compare_configurations("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+```
+
+### Example Output
+
+* **Best Model:** Random Forest
+* **Test Recall:** 0.81
+* **Test AUC:** 0.85
+* **Confusion Matrix & Feature Importances** plotted automatically
 
 ---
 
-## ▶️ How to Explore the Project
+## 📊 Example Visuals
 
-Since this project was developed using **Kaggle Notebooks**, you can run and explore it by:
+* Churn distribution pie chart
+* Boxplots of tenure/monthly charges by churn
+* Correlation heatmap
+* Model comparison bar plots
+* Confusion matrix
 
-1. Visiting the Kaggle Notebook (link below).
-2. Running all cells to reproduce results.
-3. Optionally downloading the notebook (`File > Download .ipynb`) to run it locally.
+---
 
-🔗 [Open the Kaggle Notebook](https://www.kaggle.com/code/nouryami/churning-customer-prediction)
+## 🔮 Roadmap
+
+* [ ] Add hyperparameter tuning (GridSearch / Optuna)
+* [ ] Add support for deep learning models (TensorFlow / PyTorch)
+* [ ] Add pipeline export for deployment
 
 ---
 
 ## 👤 Author
 
-**Hosam Salah**  
-📫 [Hosam.s.alsayed@gmail.com](mailto:Hosam.s.alsayed@gmail.com)  
+**Hosam Salah**
+
+📫 [Hosam.s.alsayed@gmail.com](mailto:Hosam.s.alsayed@gmail.com)
+
 🔗 [LinkedIn](https://www.linkedin.com/in/your-link](https://www.linkedin.com/in/hosam-salah-0a6033207/))
 📍 Cairo, Egypt
